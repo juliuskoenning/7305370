@@ -1,19 +1,13 @@
-import React from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-
-function LoginPage() {
-  let navigate = useNavigate();
-  let { username } = useParams();
+import React from 'react';
+import LoginContent from '../components/LoginContent';
+const LoginPage = () => {
   return (
-    <div>
-      This is the login page
-      <button 
-        onClick={() =>{
-        navigate('/forum')}}> 
-        Login to forum 
-      </button>
-    </div>
+    <>
+      <main>
+        <LoginContent />
+      </main>
+    </>
   );
-}
+};
 
-export default LoginPage
+export default LoginPage;

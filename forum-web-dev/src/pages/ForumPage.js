@@ -1,8 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom'
-//import ForumContent from '../components/ForumContent.jsx';
-
-/*const ForumPage = () => {
+import ForumContent from '../components/ForumContent';
+const ForumPage = () => {
   return (
     <>
       <main>
@@ -10,15 +8,6 @@ import { useParams } from 'react-router-dom'
       </main>
     </>
   );
-}; */
-
-function ForumPage() {
-  let { username } = useParams();
-  return (
-    <div>
-      This is the forum page of {username}
-    </div>
-  )
-}
+};
 
 export default ForumPage;
