@@ -13,6 +13,7 @@ function App() {
       </nav>
       <Routes>
         <Route path='/' element={<LoginPage />} />
+        <Route path='/forum/' element={<ForumPage />} /> 
         <Route path='/forum/:username' element={<ForumPage />} /> 
         <Route path='*' element={<ErrorPage />} />
       </Routes>
