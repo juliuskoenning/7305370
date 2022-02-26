@@ -15,31 +15,18 @@ const LoginContent = () => {
     alert(inputs);
   }
 
-/*const LoginContent = () => {
-    const [realname, setInput1] = useState(''); // '' is the initial state value
-    const [vorname, setInput2] = useState(''); // '' is the initial state value
-    const [email, setInput3] = useState(''); // '' is the initial state value
-*/
     // Navigate to forum with username
     let navigate = useNavigate();
     const routeChange = () =>{
         let path = `/forum/${inputs.nachname}`;
         navigate(path, {state:{vorname:inputs.vorname,nachname:inputs.nachname, email:inputs.email}});
-  }/*
+  }
     return (
-    <div>
-        <label>Email:</label>
-        <input value={email} onInput={event1 => setInput3(event1.target.value)}/>
-        <label>Vorname:</label>
-        <input value={vorname} onInput={event2 => setInput2(event2.target.value)}/>
-        <label>Name:</label>
-        <input value={realname} onInput={event3 => setInput1(event3.target.value)}/>
-        <button onClick={routeChange}>Einloggen</button>
-        {vorname} {realname} {email}
-    </div>
-  );
-};*/
-    return (
+      <div>
+      <header className='header'>
+        <h1>Projekt Forum</h1>
+      </header>
+
       <form onSubmit={handleSubmit}>
         <label>Vorname:
         <input
@@ -65,8 +52,9 @@ const LoginContent = () => {
             onChange={handleChange}
           />
           </label>
-          <button onClick={()=>routeChange()}>Login</button>
+          <button className='btn' onClick={()=>routeChange()}>Login</button>
       </form>
+      </div>
     )
 }
 
