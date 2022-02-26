@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 
 const LoginContent = () => {
   const [inputs, setInputs] = useState({});
@@ -22,10 +21,10 @@ const LoginContent = () => {
     const [email, setInput3] = useState(''); // '' is the initial state value
 */
     // Navigate to forum with username
-    let navigate = useNavigate(); 
-    const routeChange = () =>{ 
-        let path = `/forum/${inputs.nachname}`; 
-        navigate(path);
+    let navigate = useNavigate();
+    const routeChange = () =>{
+        let path = `/forum/${inputs.nachname}`;
+        navigate(path, {state:{vorname:inputs.vorname,nachname:inputs.nachname, email:inputs.email}});
   }/*
     return (
     <div>
@@ -43,30 +42,30 @@ const LoginContent = () => {
     return (
       <form onSubmit={handleSubmit}>
         <label>Vorname:
-        <input 
-          type="text" 
-          name="vorname" 
-          value={inputs.vorname || ""} 
+        <input
+          type="text"
+          name="vorname"
+          value={inputs.vorname || ""}
           onChange={handleChange}
         />
         </label>
         <label>Nachname:
-          <input 
-            type="text" 
-            name="nachname" 
-            value={inputs.nachname || ""} 
+          <input
+            type="text"
+            name="nachname"
+            value={inputs.nachname || ""}
             onChange={handleChange}
           />
           </label>
           <label>Email:
-          <input 
-            type="text" 
-            name="email" 
-            value={inputs.email || ""} 
+          <input
+            type="text"
+            name="email"
+            value={inputs.email || ""}
             onChange={handleChange}
           />
           </label>
-          <input type="submit" onClick={routeChange}/>
+          <button onClick={()=>routeChange()}>Login</button>
       </form>
     )
 }

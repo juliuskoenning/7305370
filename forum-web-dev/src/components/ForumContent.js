@@ -1,10 +1,11 @@
 import React from 'react';
-import LoginContent from './LoginContent'
+import { useLocation } from 'react-router-dom';
 
 const ForumContent = () => {
+  const location = useLocation();
   return (
-    <div>This is the forum page of {} with the mail
-
+    <div>
+      This is the forum page of {location.state.nachname}
     </div>
   );
 };
