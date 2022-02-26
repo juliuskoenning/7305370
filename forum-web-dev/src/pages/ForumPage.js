@@ -31,7 +31,7 @@ const ForumPage = () => {
     <div>
         <AddTask onAdd={addTask}/>
         {tasks.length > 0 ? <ForumContent tasks={tasks} onDelete=
-        {deleteTask} />: 'No Content to Show'}
+        {deleteTask} />: 'Kein Inhalt vorhanden.'}
     </div>
   );
 };

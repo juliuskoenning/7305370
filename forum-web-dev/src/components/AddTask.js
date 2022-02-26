@@ -22,10 +22,10 @@ const AddTask = ({ onAdd }) => {
     <div>
     <form className='add-form' onSubmit={onSubmit}>
         <div className='form-control'>
-        <label>Content</label>
-        <input type='text' placeholder='Add Content' value={text} onChange={(e) => setText(e.target.value)}/>
+        <label>Inhalt</label>
+        <input type='text' placeholder='Inhalt hinzufügen' value={text} onChange={(e) => setText(e.target.value)}/>
         </div>
-        <input type='submit' value='Save Content' className='btn btn-block'/>
+        <input type='submit' value='Inhalt speichern' className='btn btn-block'/>
     </form>
     </div>
   )

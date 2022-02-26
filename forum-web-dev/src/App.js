@@ -14,7 +14,7 @@ function App() {
         <Link to='/forum'> Forum </Link>
       </nav>
       <header className='header'>
-        <h1>Projekt Forum</h1>
+        <h1>Projekt-Forum</h1>
       </header>
       <Routes>
         <Route path='/' element={<LoginPage />} />
