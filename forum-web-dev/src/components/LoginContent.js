@@ -28,30 +28,36 @@ const LoginContent = () => {
       </header>
 
       <form onSubmit={handleSubmit}>
-        <label>Vorname:
+        <label>
         <input
           type="text"
           name="vorname"
           value={inputs.vorname || ""}
           onChange={handleChange}
         />
+        Vorname
         </label>
-        <label>Nachname:
+        <br></br>
+        <label>
           <input
             type="text"
             name="nachname"
             value={inputs.nachname || ""}
             onChange={handleChange}
           />
+          Nachname
           </label>
-          <label>Email:
+          <br></br>
+          <label>
           <input
             type="text"
             name="email"
             value={inputs.email || ""}
             onChange={handleChange}
           />
+          Email
           </label>
+          <br></br>
           <button className='btn' onClick={()=>routeChange()}>Login</button>
       </form>
       </div>

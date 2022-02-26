@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage.js';
 
 function App() {
   return (
+    <div className='container'>
     <Router>
       <nav>
         <Link to='/'> Login </Link>
@@ -18,6 +19,7 @@ function App() {
         <Route path='*' element={<ErrorPage />} />
       </Routes>
     </Router>
+    </div>
   );
 }
 
