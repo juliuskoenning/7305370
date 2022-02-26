@@ -28,6 +28,8 @@ const LoginContent = () => {
       </header>
 
       <form onSubmit={handleSubmit}>
+        Vorname:
+        <br></br>
         <label>
         <input
           type="text"
@@ -35,8 +37,9 @@ const LoginContent = () => {
           value={inputs.vorname || ""}
           onChange={handleChange}
         />
-        Vorname
         </label>
+        <br></br>
+        Nachname:
         <br></br>
         <label>
           <input
@@ -45,8 +48,10 @@ const LoginContent = () => {
             value={inputs.nachname || ""}
             onChange={handleChange}
           />
-          Nachname
+          
           </label>
+          <br></br>
+          Email:
           <br></br>
           <label>
           <input
@@ -55,7 +60,6 @@ const LoginContent = () => {
             value={inputs.email || ""}
             onChange={handleChange}
           />
-          Email
           </label>
           <br></br>
           <button className='btn' onClick={()=>routeChange()}>Login</button>
