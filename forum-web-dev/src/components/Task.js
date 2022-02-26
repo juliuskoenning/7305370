@@ -12,6 +12,7 @@ const Task = ({ task, onDelete }) => {
             />
         </h3>
         <p>{task.day}</p>
+        <p>{task.email}</p>
     </div>
   )
 }

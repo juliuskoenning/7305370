@@ -2,26 +2,23 @@ import { useState } from 'react'
 import React from 'react';
 import ForumContent from '../components/ForumContent';
 import AddTask from '../components/AddTask';
+import {useLocation} from 'react-router-dom';
 
 const ForumPage = () => {
   const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: 'Inhalt 1',
-      day: 'Koenning',
-      reminder: true,
-    },
-    {
-      id: 2,
-      text: 'Inhalt 2',
-      day: 'Mustermann',
-      reminder: true,
-      }
+    
   ])
 
   // Content hinzufügen
   const addTask = (task) => {
-    console.log(task);
+    const id = Math.floor(Math.random()
+     * 10000) +1
+    //const day = location.state.name
+    const newTask = { id, ...task }
+    
+    setTasks([...tasks, newTask])
+    
+    console.log(id)
   }
 
   // Content löschen

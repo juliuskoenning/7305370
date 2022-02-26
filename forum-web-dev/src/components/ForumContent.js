@@ -6,10 +6,9 @@ const ForumContent = ({ tasks, onDelete }) => {
   let { nachname, vorname, email } = useParams();
   return (
     <div>
-      This is the forum page of {nachname}
 
       {tasks.map((task) => (
-      <Task key={task.id} task={task} onDelete={onDelete} />
+        <Task key={task.id} task={task} onDelete={onDelete} />
       ))}
     </div>
   );

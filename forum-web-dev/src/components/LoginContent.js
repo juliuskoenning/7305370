@@ -23,9 +23,7 @@ const LoginContent = () => {
   }
     return (
       <div>
-      <header className='header'>
-        <h1>Projekt Forum</h1>
-      </header>
+      
 
       <form onSubmit={handleSubmit}>
         Vorname:
