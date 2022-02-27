@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import {useLocation} from 'react-router-dom';
+// Matrikelnummer: 7305370
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
-const AddTask = ({ onAdd }) => {
+const AddContent = ({ onAdd }) => {
     const location = useLocation()
     const [text, setText] = useState('')
-    var day = location.state.nachname
+    var name = location.state.nachname
     var email = location.state.email
 
-    
+
     const onSubmit = (e) => {
         e.preventDefault()
         if(!text) {
@@ -15,7 +16,7 @@ const AddTask = ({ onAdd }) => {
             return
         }
 
-        onAdd({ text, day, email })
+        onAdd({ text, name, email })
         setText('')
     }
   return (
@@ -31,4 +32,4 @@ const AddTask = ({ onAdd }) => {
   )
 }
 
-export default AddTask
+export default AddContent

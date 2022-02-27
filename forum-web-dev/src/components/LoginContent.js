@@ -1,3 +1,4 @@
+// Matrikelnummer: 7305370
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -19,7 +20,7 @@ const LoginContent = () => {
     let navigate = useNavigate();
     const routeChange = () =>{
         let path = `/forum/${inputs.nachname}`;
-        navigate(path, {state:{vorname:inputs.vorname,nachname:inputs.nachname, email:inputs.email}});
+        navigate(path, {state:{nachname:inputs.nachname, email:inputs.email}});
   }
     return (
       <div>
@@ -27,7 +28,7 @@ const LoginContent = () => {
 
       <form onSubmit={handleSubmit}>
         Vorname:
-        <br></br>
+        <br/>
         <label>
         <input
           type="text"
@@ -36,9 +37,9 @@ const LoginContent = () => {
           onChange={handleChange}
         />
         </label>
-        <br></br>
+        <br/>
         Nachname:
-        <br></br>
+        <br/>
         <label>
           <input
             type="text"
@@ -48,9 +49,9 @@ const LoginContent = () => {
           />
 
           </label>
-          <br></br>
+          <br/>
           Email:
-          <br></br>
+          <br/>
           <label>
           <input
             type="text"
@@ -59,7 +60,7 @@ const LoginContent = () => {
             onChange={handleChange}
           />
           </label>
-          <br></br>
+          <br/>
           <button className='btn' onClick={()=>routeChange()}>Login</button>
       </form>
       </div>

@@ -1,12 +1,12 @@
+// Matrikelnummer: 7305370
 import React from 'react';
-import Task from './Task';
+import Content from './Content';
 
-const ForumContent = ({ tasks, onDelete }) => {
+const ForumContent = ({ contents, onDelete }) => {
   return (
     <div>
-
-      {tasks.map((task) => (
-        <Task key={task.id} task={task} onDelete={onDelete} />
+      {contents.map((content) => (
+        <Content key={content.id} content={content} onDelete={onDelete} />
       ))}
     </div>
   );

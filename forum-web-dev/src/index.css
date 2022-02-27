@@ -1,3 +1,5 @@
+/*Matrikelnummer: 7305370
+Styling from React Tutorial (https://www.youtube.com/watch?v=w7ejDZ8SWv8)*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
 * {
@@ -48,7 +50,7 @@ body {
   font-family: inherit;
 }
 
-.task {
+.content {
   background: #f4f4f4;
   margin: 5px;
   padding: 10px 20px;
