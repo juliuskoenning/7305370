@@ -6,6 +6,7 @@ import ForumPage from './pages/ForumPage.js';
 import LoginPage from './pages/LoginPage.js';
 
 function App() {
+
   const [tasks, setTasks] = useState([
 
   ])
@@ -27,13 +28,17 @@ function App() {
     setTasks(tasks.filter((task) => task.id
     !== id))
   }
+  var nachname = ''
+  var email = ''
   return (
     <div className='container'>
 
     <Router>
       <nav>
-        <Link to='/'> Login </Link>
-        <Link to='/forum'> Forum </Link>
+        <Link to='/' className='nav'> Login </Link>
+        <Link to={`/forum/${nachname}`}
+                    state= {{nachname:nachname, email:email}}
+                    > Forum </Link>
       </nav>
       <header className='header'>
         <h1>Projekt-Forum</h1>

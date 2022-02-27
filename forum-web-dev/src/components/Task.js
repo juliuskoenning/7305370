@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 
 const Task = ({ task, onDelete }) => {
   const {nachname} = useParams();
-  console.log(nachname)
   return (
     <div className='task'>
         <h3>
