@@ -23,7 +23,7 @@ const LoginContent = () => {
   }
     return (
       <div>
-      
+
 
       <form onSubmit={handleSubmit}>
         Vorname:
@@ -46,7 +46,7 @@ const LoginContent = () => {
             value={inputs.nachname || ""}
             onChange={handleChange}
           />
-          
+
           </label>
           <br></br>
           Email:

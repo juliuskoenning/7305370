@@ -1,12 +1,11 @@
-import { useState } from 'react'
 import React from 'react';
-import ForumContent from '../components/ForumContent';
 import AddTask from '../components/AddTask';
-import {useLocation} from 'react-router-dom';
+import ForumContent from '../components/ForumContent';
 
-const ForumPage = () => {
-  const [tasks, setTasks] = useState([
-    
+const ForumPage = ({ addTask,deleteTask,tasks }) => {
+  
+  /*const [tasks, setTasks] = useState([
+
   ])
 
   // Content hinzufügen
@@ -15,17 +14,17 @@ const ForumPage = () => {
      * 10000) +1
     //const day = location.state.name
     const newTask = { id, ...task }
-    
+
     setTasks([...tasks, newTask])
-    
+
     console.log(id)
   }
 
   // Content löschen
   const deleteTask = (id) => {
-    setTasks(tasks.filter((task) => task.id 
+    setTasks(tasks.filter((task) => task.id
     !== id))
-  }
+  }*/
 
   return (
     <div>

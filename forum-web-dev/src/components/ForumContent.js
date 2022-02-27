@@ -1,9 +1,10 @@
 import React from 'react';
-import { useLocation, useParams } from 'react-router-dom';
-import Task from './Task'
+import { useParams } from 'react-router-dom';
+import Task from './Task';
 
 const ForumContent = ({ tasks, onDelete }) => {
   let { nachname, vorname, email } = useParams();
+
   return (
     <div>
 
